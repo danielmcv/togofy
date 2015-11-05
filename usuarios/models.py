@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 tipos_usuarios = (
-	(CLIENTE, "cliente"),
-	(RESTAURANT, "restaurant"),
+	(0, "cliente"),
+	(1, "restaurant"),
 )
 
 class Usuario(models.Model):
@@ -17,7 +17,6 @@ class Usuario(models.Model):
 	password = models.CharField(max_length=15)
 	telefono = models.CharField(max_length=10)
 	celular = models.CharField(max_length=10)
-	tipo = models.ChoiceField(opcion_chida1)
 
 class Cliente(models.Model):
 	"""datos de usuario cliente """

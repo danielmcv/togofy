@@ -26,6 +26,6 @@ class Platillos(models.Model):
 class Cosas(models.Model):
 	"""datos de cosas"""
 	_id = models.ForeignKey('usuarios.Orden')
-	platillo = models.ForeignKey(Platillos)
-	precio = models.ForeignKey(Platillos)
+	platillo = models.ForeignKey(Platillos, related_name='platillos')
+	precio = models.ForeignKey(Platillos, related_name='precios')
 	cantidad = models.IntegerField()
